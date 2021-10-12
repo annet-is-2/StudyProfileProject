@@ -45,8 +45,8 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{ fullName: "+getFullName()+"; universityID: "+getUniversityId()+
+        return "Student{fullName: "+getFullName()+"; universityID: "+getUniversityId()+
                 "; currentCourseNumber: "+Integer.toString(getCurrentCourseNumber())+"; avgExamScore: "+Float.toString(getAvgExamScore())+
-                "; }";
+                "}";
     }
 }

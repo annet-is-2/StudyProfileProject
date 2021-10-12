@@ -1,15 +1,4 @@
 public class University {
-    public enum StudyProfile {
-        MEDICINE("Медицина"),
-        MATHEMATICS("Математика"),
-        ECONOMICS("Экономика");
-
-        public final String profileName;
-
-        private StudyProfile(String profileName) {
-            this.profileName = profileName;
-        }
-    }
 
     private String id;
     private String fullName;
@@ -57,8 +46,8 @@ public class University {
         this.yearOfFoundation = yearOfFoundation;
     }
 
-    public StudyProfile getMainProfile() {
-        return mainProfile;
+    public String getMainProfile() {
+        return mainProfile.getProfileName();
     }
 
     public void setMainProfile(StudyProfile mainProfile) {
@@ -67,8 +56,8 @@ public class University {
 
     @Override
     public String toString() {
-        return "University{ ID: "+getId()+"; fullName: "+getFullName()+
+        return "University{ID: "+getId()+"; fullName: "+getFullName()+
                            "; shortName: "+getShortName()+"; yearOfFoundation: "+Integer.toString(getYearOfFoundation())+
-                           "; mainProfile: "+getMainProfile().toString()+"}";
+                           "; mainProfile: "+getMainProfile()+"}";
     }
 }
